@@ -1,25 +1,39 @@
-# EA Intelligence Hub — Demonstration
+# EA Intelligence Hub — Phase 2 POC
 
-A minimal, runnable Enterprise AI Architecture portfolio prototype with synthetic data.
+A runnable Enterprise AI Architecture portfolio and governance prototype using **Streamlit + SQLite** and **synthetic banking data**.
 
 ## Windows 11 / Python 3.13
 
 ```powershell
+git clone https://github.com/tajudeenj/enterprise-ai-architecture-hub.git
+cd enterprise-ai-architecture-hub
 py -3.13 -m venv .venv
-.venv\Scripts\activate
+.\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
-Open the local URL printed by Streamlit (typically http://localhost:8501).
+If you previously cloned, run `git pull` inside the project folder before starting.
 
-## Scope
-- Executive portfolio dashboard
-- Initiative intake
-- Reusable asset catalogue
-- Preliminary rule-based architecture assessment
-- Demonstration review gates
-- Roadmap and conceptual HLD text export
+## Phase 2 features
 
-## Important limitations
-Data exists only in the current Streamlit session and is not persisted. No authentication, real approval workflow, verified AI inference, infrastructure discovery, diagram generator, or bank system integration. The HLD is a conceptual text outline, **not** an approved network/infrastructure HLD. Do not enter production bank data or confidential information.
+- Persistent SQLite repository (`ea_hub.sqlite3`, created on first run)
+- Synthetic business capability, application and reusable asset catalogue
+- AI initiative registration with capability/application references
+- Explicit application-to-asset dependency relationships and impact view
+- Review tracking across EA, GISD, GSD, Infrastructure, Data Governance and Investment
+- 2027–2028 initiative roadmap
+- Downloadable **conceptual Mermaid HLD** from recorded relationships
+- Synthetic sample portfolio preloaded once, when the database is initialized
+
+## Scope and limitations
+
+**Demonstration only; not production ready.** Review statuses are not authenticated approvals. Architecture relationships are manually captured, not automatically discovered. HLD is a conceptual graph and must be validated by architecture/security teams before use. There is no RBAC, approval evidence immutability, model integration, automated network discovery, or cost estimation engine. Do not enter bank production data or confidential information.
+
+## Next milestones
+
+1. Authentication, RBAC, audit trail, review ownership and lifecycle
+2. Import from CMDB/API inventory and graph impact analysis
+3. Multi-option feasibility/TCO and architecture decision records
+4. Validated diagram generation from approved infrastructure metadata
+5. Portfolio roadmap with dependencies, baselines and delivery progress
